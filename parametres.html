@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GLOUGLOU : nos cocktails préférés, nos tests et nos idées de recettes.">
+    <title>Paramètres | GLOUGLOU</title>
+
+    <!-- Le CSS gère les couleurs, les tailles et la disposition. -->
+    <link id="theme-stylesheet" rel="stylesheet" href="css/style.css">
+    <script src="js/theme.js" defer></script>
+    <script src="js/feedback.js" defer></script>
+</head>
+<body>
+    <header class="site-header">
+        <a class="logo" href="index.html">GLOUGLOU</a>
+        <nav aria-label="Navigation principale">
+            <a href="index.html">Accueil</a>
+            <a href="a-tester.html">À tester</a>
+            <a href="classement.html">Classement</a>
+            <a href="parametres.html">Paramètres</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Paramètres</h1>
+
+        <section class="panel">
+            <h2>Apparence</h2>
+            <p>Choisissez un style pour le site.</p>
+            <!-- Le bouton est géré par js/theme.js. -->
+            <button id="change-theme" type="button">Changer de style</button>
+        </section>
+
+        <section class="panel">
+            <h2>Donner votre avis</h2>
+            <p>Votre logiciel de messagerie s'ouvrira avec un e-mail préparé.</p>
+
+            <form id="feedback-form">
+                <label for="subject">Sujet</label>
+                <input id="subject" name="subject" type="text" required>
+
+                <label for="email">Votre e-mail (facultatif)</label>
+                <input id="email" name="email" type="email">
+
+                <label for="message">Votre message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Préparer l'e-mail</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">GLOUGLOU — Projet étudiant</footer>
+</body>
+</html>

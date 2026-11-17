@@ -1,0 +1,14 @@
+/* Deuxième style volontairement très différent : sombre et anguleux. */
+@import url("style.css");
+
+:root {
+    --background: #141820;
+    --surface: #252d39;
+    --text: #f1f5f9;
+    --accent: #5fe0c0;
+    --border: #556173;
+}
+
+body { font-family: Georgia, serif; }
+.card, .panel, button, .button, input, textarea { border-radius: 0; }
+.logo { letter-spacing: 3px; }

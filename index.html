@@ -3,35 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GLOUGLOU</title>
+    <meta name="description" content="GLOUGLOU : nos cocktails préférés, nos tests et nos idées de recettes.">
+    <title>Accueil | GLOUGLOU</title>
 
-    <!-- Styles du site -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Logique du site -->
-    <script src="js/app.js" defer></script>
+    <!-- Le CSS gère les couleurs, les tailles et la disposition. -->
+    <link id="theme-stylesheet" rel="stylesheet" href="css/style.css">
+    <script src="js/theme.js" defer></script>
 </head>
 <body>
-    <!-- En-tête et navigation -->
-    <header>
-        <a class="logo" href="#accueil">
-            GLOUGLOU<span>.</span>
-        </a>
-
+    <header class="site-header">
+        <a class="logo" href="index.html">GLOUGLOU</a>
         <nav aria-label="Navigation principale">
-            <a href="#accueil">Accueil</a>
-            <a href="#tester">À tester</a>
-            <a href="#classement">Classement</a>
-            <a href="#parametres">Paramètres</a>
+            <a href="index.html">Accueil</a>
+            <a href="a-tester.html">À tester</a>
+            <a href="classement.html">Classement</a>
+            <a href="parametres.html">Paramètres</a>
         </nav>
     </header>
 
-    <!-- Les pages sont affichées ici par js/app.js -->
-    <main id="app"></main>
+    <main class="container">
+        <section class="hero">
+            <p class="eyebrow">Bienvenue sur GLOUGLOU</p>
+            <h1>On trinque à quoi ?</h1>
+            <p>Notre sélection de cocktails à tester et à partager.</p>
+        </section>
 
-    <!-- Pied de page -->
-    <footer>
-        GLOUGLOU — Projet étudiant
-    </footer>
+        <section aria-labelledby="top-title">
+            <h2 id="top-title">Nos coups de cœur</h2>
+
+            <!-- Pour ajouter une carte : copier un bloc <article> complet. -->
+            <div class="card-grid">
+                <article class="card">
+                    <div class="card-image">☕</div>
+                    <h3>Espresso Martini</h3>
+                    <p>Un cocktail gourmand au café.</p>
+                    <p class="stars" aria-label="5 étoiles sur 5">★★★★★</p>
+                    <a class="button" href="cocktail.html">Voir la recette</a>
+                </article>
+
+                <article class="card">
+                    <div class="card-image">🍃</div>
+                    <h3>Mojito</h3>
+                    <p>Menthe et citron vert.</p>
+                    <p class="stars" aria-label="4 étoiles sur 5">★★★★☆</p>
+                    <a class="button" href="cocktail.html">Voir la recette</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">GLOUGLOU — Projet étudiant</footer>
 </body>
 </html>

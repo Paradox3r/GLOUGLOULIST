@@ -1,200 +1,97 @@
-/* GLOUGLOU — Styles principaux */
-
+/* 1. COULEURS : modifiez ces valeurs pour changer le thème. */
 :root {
-    --bg:#fff7ec;
-    --card:#fff;
-    --ink:#33231f;
-    --muted:#75665e;
-    --accent:#ff704b;
-    --border:#eadfd5
+    --background: #fff8ef;
+    --surface: #ffffff;
+    --text: #38251f;
+    --accent: #ff704b;
+    --border: #e9dcd0;
 }
 
-body.dark {
-    --bg:#211d22;
-    --card:#302a30;
-    --ink:#fff6ee;
-    --muted:#c5b4b0;
-    --border:#54464b
-}
-
-* {
-    box-sizing:border-box
-}
-
+/* 2. RÈGLES GÉNÉRALES */
 body {
-    margin:0;
-    background:var(--bg);
-    color:var(--ink);
-    font:16px/1.5 system-ui,sans-serif
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.5;
 }
 
-a {
-    color:inherit;
-    text-decoration:none
+a { color: inherit; }
+
+/* 3. MENU : identique sur toutes les pages */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 5%;
+    border-bottom: 1px solid var(--border);
 }
 
-header {
-    padding:22px max(24px,calc((100vw - 1080px)/2));
-    display:flex;
-    justify-content:space-between;
-    gap:20px;
-    align-items:center;
-    border-bottom:1px solid var(--border)
+.logo { font-size: 24px; font-weight: bold; text-decoration: none; }
+nav { display: flex; flex-wrap: wrap; gap: 16px; }
+nav a { text-decoration: none; }
+nav a:hover { color: var(--accent); }
+
+/* 4. CONTENU DES PAGES */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 35px 20px;
+    min-height: 65vh;
 }
 
-.logo {
-    font-size:24px;
-    font-weight:900
+.hero { padding: 25px 0; }
+.eyebrow { color: var(--accent); font-weight: bold; }
+
+/* 5. COMPOSANTS RÉUTILISABLES */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
-.logo span {
-    color:var(--accent)
+.card, .panel {
+    padding: 20px;
+    background-color: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
 }
 
-nav {
-    display:flex;
-    gap:18px;
-    flex-wrap:wrap
+.panel { margin-bottom: 20px; }
+.card-image { font-size: 55px; text-align: center; }
+.stars { color: #d68b00; font-size: 22px; }
+
+.button, button {
+    display: inline-block;
+    padding: 10px 16px;
+    border: none;
+    border-radius: 8px;
+    background-color: var(--accent);
+    color: #241611;
+    font: inherit;
+    cursor: pointer;
+    text-decoration: none;
 }
 
-nav a:hover {
-    color:var(--accent)
+/* 6. FORMULAIRES */
+label { display: block; margin-top: 12px; }
+input, textarea {
+    display: block;
+    width: 100%;
+    max-width: 500px;
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 5px 0 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
 }
 
-main {
-    max-width:1080px;
-    margin:auto;
-    padding:40px 24px;
-    min-height:75vh
-}
+.ranking li { margin-bottom: 14px; }
+.site-footer { padding: 25px; text-align: center; }
 
-h1 {
-    font-size:clamp(38px,6vw,64px);
-    line-height:1.1;
-    margin:12px 0
-}
-
-h2 {
-    margin-top:34px
-}
-
-p {
-    color:var(--muted)
-}
-
-.lead {
-    font-size:20px;
-    max-width:600px
-}
-
-.grid {
-    display:grid;
-    grid-template-columns:repeat(3,minmax(0,1fr));
-    gap:18px
-}
-
-.card,.panel {
-    border:1px solid var(--border);
-    background:var(--card);
-    border-radius:16px;
-    padding:20px
-}
-
-.art {
-    height:140px;
-    display:grid;
-    place-items:center;
-    border-radius:12px;
-    background:linear-gradient(120deg,#ffb788,#f78b9c);
-    font-size:60px
-}
-
-.stars {
-    color:#eea41f
-}
-
-.muted {
-    color:var(--muted)
-}
-
-button,.btn {
-    border:0;
-    display:inline-block;
-    background:var(--accent);
-    color:#251c18;
-    border-radius:9px;
-    padding:10px 16px;
-    font:inherit;
-    font-weight:700;
-    cursor:pointer;
-    margin:8px 6px 8px 0
-}
-
-.secondary {
-    background:var(--bg);
-    color:var(--ink);
-    border:1px solid var(--border)
-}
-
-label {
-    display:block;
-    margin:14px 0 4px;
-    font-weight:650
-}
-
-input,textarea,select {
-    width:100%;
-    padding:11px;
-    border:1px solid var(--border);
-    border-radius:8px;
-    background:var(--bg);
-    color:var(--ink);
-    font:inherit
-}
-
-textarea {
-    min-height:90px
-}
-
-form {
-    max-width:650px
-}
-
-.panel {
-    margin:22px 0
-}
-
-footer {
-    text-align:center;
-    padding:30px;
-    color:var(--muted);
-    border-top:1px solid var(--border)
-}
-
-@media(max-width:750px) {
-    header {
-        flex-direction:column;
-        align-items:flex-start
-    }
-
-    .grid {
-        grid-template-columns:repeat(2,1fr)
-    }
-
-}
-
-@media(max-width:520px) {
-    .grid {
-        grid-template-columns:1fr
-    }
-
-    nav {
-        gap:10px;
-        font-size:14px
-    }
-
-    main {
-        padding:26px 18px
-    }
-
+/* 7. MOBILE : sur petit écran, les cartes passent en colonne. */
+@media (max-width: 600px) {
+    .site-header { flex-direction: column; align-items: flex-start; }
+    .card-grid { grid-template-columns: 1fr; }
 }

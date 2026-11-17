@@ -1,24 +1,47 @@
-# GLOUGLOU — Base simple
+# GLOUGLOU — Version pédagogique
+
+## Pourquoi cette version ?
+
+Chaque page a son **propre fichier HTML**. Le JavaScript ne fabrique plus les pages.
 
 ## Démarrer
-Ouvrez `index.html` dans un navigateur, ou utilisez VS Code avec l'extension Live Server.
+
+1. Ouvrez le dossier dans VS Code.
+2. Lancez `index.html` avec l'extension **Live Server**.
+3. Cliquez sur les liens du menu pour naviguer.
 
 ## Structure
-- `index.html` : menu et zone principale
-- `css/style.css` : couleurs, cartes, responsive
-- `js/app.js` : navigation, données, fiches, formulaires
 
-## Déjà fonctionnel
-Accueil, À tester, Classement, fiches, ajout/modification/suppression, étoiles sur 5, thème clair/sombre.
+- `index.html` : accueil.
+- `a-tester.html` : liste des cocktails à tester.
+- `classement.html` : classement.
+- `cocktail.html` : exemple d'une fiche cocktail.
+- `parametres.html` : bouton de style et formulaire.
+- `css/style.css` : les règles communes (cartes, boutons, menu).
+- `css/style-alternatif.css` : deuxième apparence.
+- `js/theme.js` : changement de feuille CSS.
+- `js/feedback.js` : préparation d'un e-mail.
 
-## Limites
-Les cocktails et retours sont enregistrés dans **localStorage**, uniquement sur l'appareil et le navigateur utilisés. **Pas de base de données partagée, pas de serveur et pas d'envoi des retours.** Les emojis sont des images provisoires.
+## Ce que vous devez comprendre
 
-## Suite recommandée
-1. Adapter le CSS à la maquette Figma.
-2. Remplacer les emojis par vos illustrations.
-3. Ajouter un backend et une base de données quand vous aurez besoin de partager les cocktails.
-4. Connecter le formulaire de retour au backend.
+- `<a href="...">` permet de changer de page.
+- `class="card"` permet de réutiliser l'apparence d'une carte.
+- `id="change-theme"` permet au JavaScript de retrouver un bouton précis.
+- `addEventListener("click", ...)` exécute du code au clic.
+- `@media` adapte la mise en page aux petits écrans.
 
-## Travail à trois
-Utilisez un dépôt GitHub commun et une branche par fonctionnalité.
+## Limitations volontaires
+
+- Les cocktails sont **écrits directement dans le HTML**. Pas de base de données.
+- Les liens « Voir la recette » mènent à **une fiche d'exemple** : vous devrez créer les autres fiches ou une vraie gestion de données plus tard.
+- Le formulaire utilise `mailto:` : il prépare l'e-mail, mais l'utilisateur doit l'envoyer dans son logiciel de messagerie.
+- Remplacez `contact@example.com` dans `js/feedback.js` par votre adresse.
+- Il manque encore des éléments de l'énoncé : vidéo sous-titrée, favicon, référencement complet, validations W3C, hébergement, etc.
+
+## Ordre conseillé
+
+1. Comprendre `index.html` et `css/style.css`.
+2. Créer une nouvelle carte en copiant un `<article class="card">`.
+3. Modifier les couleurs et espacements.
+4. Comprendre `js/theme.js` puis `js/feedback.js`.
+5. Ajouter les éléments obligatoires de l'énoncé, un à un.
