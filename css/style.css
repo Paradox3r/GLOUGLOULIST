@@ -90,7 +90,7 @@ input, textarea {
 .ranking li { margin-bottom: 14px; }
 .site-footer { padding: 25px; text-align: center; }
 
-/* 7. MOBILE : sur petit écran, les cartes passent en colonne. */
+/* 7. MOBILE: sur petit screen, les cartes passent en colonne. */
 @media (max-width: 600px) {
     .site-header { flex-direction: column; align-items: flex-start; }
     .card-grid { grid-template-columns: 1fr; }
