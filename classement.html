@@ -29,15 +29,58 @@
         </nav>
     </header>
 
-    <main class="container">
-        <h1>Classement</h1>
-        <p>Nos cocktails préférés, classés selon nos notes.</p>
+    
+<main class="container classement-page">
 
-        <ol class="ranking">
-            <li><strong>Espresso Martini</strong> <span class="stars">★★★★★</span></li>
-            <li><strong>Mojito</strong> <span class="stars">★★★★☆</span></li>
-        </ol>
-    </main>
+    <div class="classement-header">
+        <div>
+            <h1>Classement</h1>
+            <p>Nos cocktails préférés, classés selon nos notes.</p>
+        </div>
+
+        <button type="button" class="sort-button">
+            ↕ Trier par note
+        </button>
+    </div>
+
+    <ol class="ranking">
+
+        <li class="ranking-card">
+            <span class="ranking-position">1</span>
+
+            <img
+                src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=200"
+                alt="Espresso Martini"
+                class="ranking-image"
+                loading="lazy"
+            >
+
+            <div class="ranking-info">
+                <h2>Espresso Martini</h2>
+                <span class="stars">★★★★★</span>
+            </div>
+        </li>
+
+        <li class="ranking-card">
+            <span class="ranking-position">2</span>
+
+            <img
+                src="https://images.unsplash.com/photo-1536935338788846bb9981813?w=200"
+                alt="Mojito"
+                class="ranking-image"
+                loading="lazy"
+            >
+
+            <div class="ranking-info">
+                <h2>Mojito</h2>
+                <span class="stars">★★★★☆</span>
+            </div>
+        </li>
+
+    </ol>
+
+</main>
+
 
     <footer class="site-footer">
 
