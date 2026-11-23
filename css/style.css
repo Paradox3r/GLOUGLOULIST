@@ -25,7 +25,6 @@ a { color: inherit; }
     align-items: center;
     gap: 20px;
     padding: 20px 5%;
-    margin: 500px;
     border-bottom: 1px solid var(--border);
 }
 
