@@ -1,4 +1,4 @@
-/* 1. COULEURS : modifiez ces valeurs pour changer le thème. */
+/* 1. COULEURS */
 :root {
     --background: #fff8ef;
     --surface: #ffffff;
@@ -18,13 +18,14 @@ body {
 
 a { color: inherit; }
 
-/* 3. MENU : identique sur toutes les pages */
+/* 3. MENU */
 .site-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
     padding: 20px 5%;
+    margin: 500px;
     border-bottom: 1px solid var(--border);
 }
 
@@ -90,7 +91,7 @@ input, textarea {
 .ranking li { margin-bottom: 14px; }
 .site-footer { padding: 25px; text-align: center; }
 
-/* 7. MOBILE: sur petit screen, les cartes passent en colonne. */
+/* 7. MOBILE */
 @media (max-width: 600px) {
     .site-header { flex-direction: column; align-items: flex-start; }
     .card-grid { grid-template-columns: 1fr; }
