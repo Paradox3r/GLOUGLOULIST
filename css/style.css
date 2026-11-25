@@ -124,7 +124,11 @@ input, textarea {
     border-radius: 6px;
 }
 
-
+/* 7. IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 
 /* ------=== FOOTER ===--------- */
