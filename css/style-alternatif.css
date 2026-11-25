@@ -127,6 +127,11 @@ input, textarea {
     border-radius: 0;
 }
 
+/* 7. IMAGES */
+img {
+    max-width: 100%;
+    height: auto;
+}
 
 
 
