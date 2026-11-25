@@ -71,6 +71,11 @@ nav a:hover { color: var(--accent); }
 .card-image { font-size: 55px; text-align: center; }
 .stars { color: #d68b00; font-size: 22px; }
 
+#toplink
+{
+    right: 10px;
+    bottom: 10px;
+}
 .button, button {
     display: inline-block;
     padding: 10px 16px;
