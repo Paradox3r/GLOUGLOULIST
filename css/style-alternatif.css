@@ -27,12 +27,14 @@ a { color: var(--accent); }
     align-items: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, serif;
     gap: 50px;
-    padding: 20px 5%;
+    padding: 10px 20px;
     margin: 20px 5%;
     border-bottom: 10px dashed var(--border);
     background-image: url("../images/bulle.webp");
 }
-
+.site-header > a:not([href]) { position: absolute; }
+#logo { margin-right: auto; }
+#logo img { display: block; width: 200px; max-width: 100%; height: auto; }
 nav { display: flex; flex-wrap: wrap-reverse; gap: 50px; }
 nav a { text-decoration: none; }
 nav a:hover { color: var(--accent); }
@@ -306,6 +308,10 @@ img {
 
     .ranking-info h2 {
         font-size: 16px;
+    }
+
+    #logo img { 
+        width: 140px; 
     }
 }
 
