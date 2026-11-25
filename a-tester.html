@@ -10,9 +10,12 @@
     <link rel="icon" type="image/png" sizes="16x16"href="favicon/favicon-16x16.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-
+    <title>À tester! - GLOUGLOU</title>
+    
     <link id="theme-stylesheet" rel="stylesheet" href="css/style.css">
     <script src="js/theme.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/glouglou.js" defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -28,15 +31,16 @@
 
     <main class="container">
         <h1>À tester</h1>
-        <p>Les cocktails que nous voulons découvrir.</p>
+        <p>Tous les cocktails que vous n'avez pas encore testés.</p>
 
-        <section class="card-grid" aria-label="Cocktails à tester">
-            <article class="card">
-                <div class="card-image">🍍</div>
-                <h2>Piña Colada</h2>
-                <p>Un cocktail tropical à base d'ananas et de coco.</p>
-                <p>Prix estimé : 7 €</p>
-            </article>
+        <label for="sort">Trier par</label>
+        <select id="sort">
+            <option value="cost-asc">Coût croissant</option>
+            <option value="cost-desc">Coût décroissant</option>
+        </select>
+
+        <section class="card-grid" id="cocktail-list" data-mode="to-test" aria-label="Cocktails à tester">
+            <noscript><p>Activez JavaScript pour afficher la liste des cocktails.</p></noscript>
         </section>
         <a id="toplink" href="#Top" title="Retour haut de la page"><button>haut</button></a>
     </main>
