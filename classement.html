@@ -14,6 +14,8 @@
 
     <link id="theme-stylesheet" rel="stylesheet" href="css/style.css">
     <script src="js/theme.js" defer></script>
+    <script src="js/data.js" defer></script>
+    <script src="js/glouglou.js" defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -29,53 +31,27 @@
 
     
 <main class="container classement-page">
+        <div class="classement-header">
+            <div>
+                <h1>Classement</h1>
+                <p>Les cocktails que vous avez testés.</p>
+            </div>
 
-    <div class="classement-header">
-        <div>
-            <h1>Classement</h1>
-            <p>Nos cocktails préférés, classés selon nos notes.</p>
+            <div>
+                <label for="sort">Trier par</label>
+                <select id="sort">
+                    <option value="rating-desc">Meilleure note</option>
+                    <option value="rating-asc">Moins bonne note</option>
+                    <option value="cost-asc">Coût croissant</option>
+                    <option value="cost-desc">Coût décroissant</option>
+                </select>
+            </div>
         </div>
 
-        <button type="button" class="sort-button">
-            ↕ Trier par note
-        </button>
-    </div>
+        <section class="card-grid" id="cocktail-list" data-mode="tested" aria-label="Cocktails testés">
+            <noscript><p>Activez JavaScript pour afficher votre classement.</p></noscript>
+        </section>
 
-    <ol class="ranking">
-
-        <li class="ranking-card">
-            <span class="ranking-position">1</span>
-
-            <img
-                src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=200"
-                alt="Espresso Martini"
-                class="ranking-image"
-                loading="lazy"
-            >
-
-            <div class="ranking-info">
-                <h2>Espresso Martini</h2>
-                <span class="stars">★★★★★</span>
-            </div>
-        </li>
-
-        <li class="ranking-card">
-            <span class="ranking-position">2</span>
-
-            <img
-                src="https://images.unsplash.com/photo-1536935338788846bb9981813?w=200"
-                alt="Mojito"
-                class="ranking-image"
-                loading="lazy"
-            >
-
-            <div class="ranking-info">
-                <h2>Mojito</h2>
-                <span class="stars">★★★★☆</span>
-            </div>
-        </li>
-
-    </ol>
     <a id="toplink" href="#Top" title="Retour haut de la page"><button>haut</button></a>
 </main>
 
