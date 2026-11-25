@@ -9,6 +9,40 @@
     --border: #556173;
 }
 
-body { font-family: Georgia, serif; }
+body {
+    font-family: Georgia, 'Times New Roman', Times, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1;
+}
+
+.site-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, serif;
+    gap: 50px;
+    padding: 20px 5%;
+    border-bottom: 10px ridge var(--border);
+}
 .card, .panel, button, .button, input, textarea { border-radius: 0; }
-.logo { letter-spacing: 3px; }
+#toplink
+{
+    position: fixed;
+    left: 50px;
+    bottom: 10px;
+}
+.button, button {
+    display: inline-block;
+    padding: 10px 16px;
+    border: ridge;
+    border-radius: 15px;
+    background-color: var(--accent);
+    color: aqua;
+    font: medium;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+
+
