@@ -300,6 +300,22 @@ input, textarea {
     }
 }
 
+/* CARTE CLIQUABLE : le lien du titre couvre toute la carte */
+.card { position: relative; }
+
+.card-link::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Les boutons restent au-dessus du lien invisible, donc utilisables */
+.card-actions { position: relative; z-index: 1; }
+
+#sort { margin-bottom: 20px; }
 
 
 /* 7. MOBILE */
