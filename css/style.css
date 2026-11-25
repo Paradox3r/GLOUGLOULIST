@@ -124,12 +124,14 @@ input, textarea {
     border-radius: 6px;
 }
 
-.site-footer { padding: 25px; text-align: center; }
+
 
 
 /* ------=== FOOTER ===--------- */
 
 .site-footer {
+    padding: 25px;
+    text-align: center;
     background-color: #39241f;
     color: white;
     padding: 40px 30px 20px;
