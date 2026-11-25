@@ -321,6 +321,10 @@ img {
 
 #sort { margin-bottom: 20px; }
 
+/* Adresse du pied de page : pas d'italique */
+.site-footer address {
+    font-style: normal;
+}
 
 /* 7. MOBILE */
 @media (max-width: 600px) {
