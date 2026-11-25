@@ -1,6 +1,7 @@
 /* Deuxième style volontairement très différent : sombre et anguleux. */
 @import url("style.css");
 
+/* 1. COULEURS */
 :root {
     --background: #141820;
     --surface: #252d39;
@@ -9,6 +10,7 @@
     --border: #556173;
 }
 
+/* 2. RÈGLES GÉNÉRALES */
 body {
     font-family: Georgia, 'Times New Roman', Times, sans-serif;
     background-color: var(--background);
@@ -16,6 +18,7 @@ body {
     line-height: 1;
 }
 
+/* 3. MENU */
 .site-header {
     display: flex;
     justify-content: space-around;
@@ -23,9 +26,18 @@ body {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, serif;
     gap: 50px;
     padding: 20px 5%;
-    border-bottom: 10px ridge var(--border);
+    margin: 20px 5%;
+    border-bottom: 10px dashed var(--border);
 }
-.card, .panel, button, .button, input, textarea { border-radius: 0; }
+
+nav { display: flex; flex-wrap: wrap-reverse; gap: 50px; }
+nav a { text-decoration: none; }
+nav a:hover { color: var(--accent); }
+
+/* 4. CONTENU DES PAGES */
+
+
+/* 5. COMPOSANTS RÉUTILISABLES */
 #toplink
 {
     position: fixed;
@@ -36,13 +48,22 @@ body {
     display: inline-block;
     padding: 10px 16px;
     border: ridge;
-    border-radius: 15px;
+    border-radius: 0;
     background-color: var(--accent);
-    color: aqua;
-    font: medium;
+    color: gray;
+    font: bold;
     cursor: pointer;
-    text-decoration: none;
 }
 
+/* 6. FORMULAIRES */
 
 
+/* ------=== FOOTER ===--------- */
+
+/* Les deux colonnes */
+
+/* Présentation */
+
+/* Navigation */
+
+/* Partie inférieure */
