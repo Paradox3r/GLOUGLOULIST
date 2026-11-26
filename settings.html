@@ -4,18 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Eliot Rys Louis Mas Andrea Maiolo">
-    <meta name="description" content="Votre classement personnel de cocktails testés, triable par note ou par coût.">
+    <meta name="description" content="Changez le style du site et envoyez-nous votre avis par e-mail.">
     <link rel="icon" href="favicon/favicon.ico" sizes="any">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <title>Classement | GLOUGLOU</title>
+
+    <title>Paramètres | GLOUGLOU</title>
 
     <link id="theme-stylesheet" rel="stylesheet" href="css/style.css">
     <script src="js/theme.js" defer></script>
-    <script src="js/data.js" defer></script>
-    <script src="js/glouglou.js" defer></script>
+    <script src="js/feedback.js" defer></script>
 </head>
 <body>
     <header class="site-header">
@@ -23,39 +23,42 @@
         <a id = "logo" href="index.html"> <img src="favicon/glouglou_logo.svg" alt="Logo GlouGlou" width=200></a>
         <nav aria-label="Navigation principale">
             <a href="index.html">Accueil</a>
-            <a href="a-tester.html">À tester</a>
-            <a href="classement.html">Classement</a>
-            <a href="parametres.html">Paramètres</a>
-            <a href="source.html">Sources</a>
+            <a href="test.html">À tester</a>
+            <a href="glougloulist.html">Classement</a>
+            <a href="settings.html">Paramètres</a>
         </nav>
     </header>
 
-    
-<main class="container classement-page">
-        <div class="classement-header">
-            <div>
-                <h1>Classement</h1>
-                <p>Les cocktails que vous avez testés.</p>
-            </div>
+    <main class="container">
+        <h1>Paramètres</h1>
 
-            <div>
-                <label for="sort">Trier par</label>
-                <select id="sort">
-                    <option value="rating-desc">Meilleure note</option>
-                    <option value="rating-asc">Moins bonne note</option>
-                    <option value="cost-asc">Coût croissant</option>
-                    <option value="cost-desc">Coût décroissant</option>
-                </select>
-            </div>
-        </div>
-
-        <section class="card-grid" id="cocktail-list" data-mode="tested" aria-label="Cocktails testés">
-            <noscript><p>Activez JavaScript pour afficher votre classement.</p></noscript>
+        <section class="panel">
+            <h2>Apparence</h2>
+            <p>Choisissez un style pour le site.</p>
+            <!-- Le bouton est géré par js/theme.js. -->
+            <button id="change-theme" type="button">Changer de style</button>
         </section>
 
-    <a id="toplink" href="#Top" title="Retour haut de la page"><button>haut</button></a>
-</main>
+        <section class="panel">
+            <h2>Donner votre avis</h2>
+            <p>Votre logiciel de messagerie s'ouvrira avec un e-mail préparé.</p>
 
+            <form id="feedback-form">
+                <label for="subject">Sujet</label>
+                <input id="subject" name="subject" type="text" required placeholder="retour positif ou negatifsur le site">
+
+                <label for="email">Votre e-mail</label>
+                <input id="email" name="email" type="email" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
+
+                <label for="message">Votre message</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+
+                <button type="submit">Préparer l'e-mail</button>
+            </form>
+        </section>
+        <a id="toplink" href="#Top" title="Retour haut de la page"><button>haut</button></a>
+        <a href="sources.html"><button>Sources</button></a>
+    </main>
 
     <footer class="site-footer">
         <div class="footer-content">
@@ -72,10 +75,10 @@
             <nav class="footer-nav" aria-label="Navigation du pied de page">
                 <h3>Navigation</h3>
                 <a href="index.html">Accueil</a>
-                <a href="a-tester.html">À tester</a>
-                <a href="classement.html">Classement</a>
-                <a href="parametres.html">Paramètres</a>
-                <a href="source.html">Sources</a>
+                <a href="test.html">À tester</a>
+                <a href="glougloulist.html">Classement</a>
+                <a href="settings.html">Paramètres</a>
+                <a href="sources.html">Sources</a>
             </nav>
 
             <nav class="footer-nav" aria-label="Réseaux sociaux">
