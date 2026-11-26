@@ -88,7 +88,7 @@ function createCard(c, note) {
     }
 
     card.innerHTML = `
-        <div class="card-image" aria-hidden="true">${c.emoji}</div>
+        <img class="card-image" src="images/${c.id}.webp" alt="" width="675" height="450" loading="lazy">
         <h2><a class="card-link" href="cocktails/${c.id}.html">${c.name}</a></h2>
         <p>${c.description}</p>
         <p>Coût estimé : ${c.cost.toLocaleString("fr-FR")} €</p>
