@@ -92,7 +92,13 @@ select {
 }
 
 .panel { margin-bottom: 20px; }
-.card-image { font-size: 55px; text-align: center; }
+.card-image {
+    display: block;
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+}
 .stars { color: #d68b00; font-size: 22px; }
 
 #toplink
