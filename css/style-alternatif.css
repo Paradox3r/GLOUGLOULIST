@@ -41,8 +41,9 @@ nav a:hover { color: var(--accent); }
 /* 4. CONTENU DES PAGES */
 #video{
     height: auto;
-    width: auto;
+    max-width: 100%;
 }
+
 #container {
     border-radius: 0;
     max-width: 1000px;
