@@ -6,9 +6,9 @@ Chaque page a son **propre fichier HTML**. Le JavaScript ne fabrique plus les pa
 
 ## Les liens important
 
-1. Notre repo github https://github.com/Paradox3r/GLOUGLOULIST
+1. Lien de notre site web https://siteela.alwaysdata.net
 2. Notre lien vers notre système de gestion de projet : "https://app.notion.com/p/SITE-GLOUGLOU-416050fae78180cb8634e2d51b41b8f0?source=copy_link"
-3. Lien de notre site web https://siteela.alwaysdata.net
+3. Notre repo github https://github.com/Paradox3r/GLOUGLOULIST
 4. Lien de l'hystorique des prompts (page Notion) : "https://app.notion.com/p/Historique-des-prompts-IA-41b050fae78180ea9ccdc4a40fda0135?source=copy_link"
 
 ## Démarrer
