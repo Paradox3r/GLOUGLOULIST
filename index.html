@@ -40,6 +40,7 @@
 </head>
 <body>
     <header class="site-header">
+        <a id="Top"></a> <!-- ancre pour le haut de la page -->
         <a id = "logo" href="index.html"> <img src="favicon/glouglou_logo.svg" alt="Logo GlouGlou" width=200></a>
         <nav aria-label="Navigation principale">
             <a href="index.html">Accueil</a>
@@ -52,8 +53,10 @@
     <main class="container">
         <section class="hero">
             <p class="eyebrow">Bienvenue sur GLOUGLOU</p>
-            <iframe referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/yVAQqUq3iU0" title="Vidéo cocktail" 
-            loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen width=400 height=200></iframe>
+            <video controls="controls" width="300" height="200">
+                <source src="video/videococktail.mp4" type="video/mp4">
+                <track src="video/videococktail.vtt" kind="captions" srclang="fr" label="Français" default>
+            </video>
         </section>
         <h1>On trinque à quoi ?</h1>
         <p>Notre sélection de cocktails à tester et à partager.</p>
