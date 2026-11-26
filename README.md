@@ -36,7 +36,6 @@ Chaque page a son **propre fichier HTML**. Le JavaScript ne fabrique plus les pa
 - Les liens « Voir la recette » mènent à **une fiche d'exemple** : vous devrez créer les autres fiches ou une vraie gestion de données plus tard.
 - Le formulaire utilise `mailto:` : il prépare l'e-mail, mais l'utilisateur doit l'envoyer dans son logiciel de messagerie.
 - Remplacez `contact@example.com` dans `js/feedback.js` par votre adresse.
-- Il manque encore des éléments de l'énoncé : vidéo sous-titrée, favicon, référencement complet, validations W3C, hébergement, etc.
 
 ## Ordre conseillé
 
