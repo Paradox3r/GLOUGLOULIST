@@ -18,7 +18,9 @@ Chaque page a son **propre fichier HTML**. Le JavaScript ne fabrique plus les pa
 - `cocktail.html` : exemple d'une fiche cocktail.
 - `settings.html` : bouton de style et formulaire.
 - `css/style.css` : les règles communes (cartes, boutons, menu).
+- `css/style.min.css` : css minimisé.
 - `css/style-alternatif.css` : deuxième apparence.
+- `css/style-alternatif.min.css` : deuxième apparence minimisé.
 - `js/theme.js` : changement de feuille CSS.
 - `js/feedback.js` : préparation d'un e-mail.
 
