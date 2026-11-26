@@ -6,16 +6,14 @@
     <meta name="author" content="Eliot Rys Louis Mas Andrea Maiolo">
     <meta name="description" content="GLOUGLOU : découvrez des recettes de cocktails, leur couts, testez les et classez vos favoris !">
     <link rel="icon" href="favicon/favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" sizes="32x32"href="favicon/favicon-32x32.ico">
-    <link rel="icon" type="image/png" sizes="16x16"href="favicon/favicon-16x16.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="manifest" href="favicon/site.webmanifest">
     <title>Accueil | GLOUGLOU</title>
 
     <link id="theme-stylesheet" rel="stylesheet" href="css/style.css">
     <script src="js/theme.js" defer></script>
-    <script src="js/data.js" defer></script>
-<script src="js/home.js" defer></script>
 
 <!--=== Données structurees: pour que les moteurs de recherche puissent localiser le site -->
 <script type="application/ld+json">
@@ -23,7 +21,7 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "GLOUGLOU",
-    "url": "https://VOTRE-SITE.alwaysdata.net/",
+    "url": "sitela.alwaysdata.net/",
     "address": {
         "@type": "PostalAddress",
         "streetAddress": "413 avenue Gaston Berger",
@@ -42,23 +40,24 @@
 </head>
 <body>
     <header class="site-header">
-        <a class="hautPage"></a> <!-- ancre pour le haut de la page -->
+        <a id="Top"></a> <!-- ancre pour le haut de la page -->
         <a id = "logo" href="index.html"> <img src="favicon/glouglou_logo.svg" alt="Logo GlouGlou" width=200></a>
         <nav aria-label="Navigation principale">
             <a href="index.html">Accueil</a>
-            <a href="a-tester.html">À tester</a>
-            <a href="classement.html">Classement</a>
-            <a href="parametres.html">Paramètres</a>
+            <a href="test.html">À tester</a>
+            <a href="glougloulist.html">Classement</a>
+            <a href="settings.html">Paramètres</a>
         </nav>
     </header>
 
     <main class="container">
         <section class="hero">
             <p class="eyebrow">Bienvenue sur GLOUGLOU</p>
-            <h1>On trinque à quoi ?</h1>
-            <p>Notre sélection de cocktails à tester et à partager.</p>
+            <iframe referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube-nocookie.com/embed/yVAQqUq3iU0" title="Vidéo cocktail" 
+            loading="lazy" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen width=400 height=200></iframe>
         </section>
-
+        <h1>On trinque à quoi ?</h1>
+        <p>Notre sélection de cocktails à tester et à partager.</p>
         <section aria-labelledby="top-title">
             <h2 id="top-title">Nos coups de cœur</h2>
 
@@ -98,9 +97,10 @@
             <nav class="footer-nav" aria-label="Navigation du pied de page">
                 <h3>Navigation</h3>
                 <a href="index.html">Accueil</a>
-                <a href="a-tester.html">À tester</a>
-                <a href="classement.html">Classement</a>
-                <a href="parametres.html">Paramètres</a>
+                <a href="test.html">À tester</a>
+                <a href="glougloulist.html">Classement</a>
+                <a href="settings.html">Paramètres</a>
+                <a href="sources.html">Sources</a>
             </nav>
 
             <nav class="footer-nav" aria-label="Réseaux sociaux">

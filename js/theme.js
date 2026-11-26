@@ -2,11 +2,15 @@
 // Il change le fichier CSS utilisé par le navigateur.
 
 const stylesheet = document.getElementById("theme-stylesheet");
-const savedTheme = localStorage.getItem("theme");
+
+// Le lien de la page vaut "css/style.css" ou "../css/style.css" (dans cocktails/).
+// On en déduit le lien du style alternatif en changeant juste le nom du fichier.
+const defaultHref = stylesheet.getAttribute("href");
+const alternativeHref = defaultHref.replace("style.css", "style-alternatif.css");
 
 // Si l'utilisateur avait choisi le style alternatif, on le restaure.
-if (savedTheme === "alternative") {
-    stylesheet.href = "css/style-alternatif.css";
+if (localStorage.getItem("theme") === "alternative") {
+    stylesheet.href = alternativeHref;
 }
 
 const themeButton = document.getElementById("change-theme");
@@ -14,13 +18,13 @@ const themeButton = document.getElementById("change-theme");
 // Ce bouton n'existe que sur la page Paramètres.
 if (themeButton !== null) {
     themeButton.addEventListener("click", function () {
-        const isAlternative = stylesheet.getAttribute("href") === "css/style-alternatif.css";
+        const isAlternative = stylesheet.getAttribute("href") === alternativeHref;
 
         if (isAlternative) {
-            stylesheet.href = "css/style.css";
+            stylesheet.href = defaultHref;
             localStorage.setItem("theme", "default");
         } else {
-            stylesheet.href = "css/style-alternatif.css";
+            stylesheet.href = alternativeHref;
             localStorage.setItem("theme", "alternative");
         }
     });

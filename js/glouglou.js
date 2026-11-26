@@ -1,5 +1,6 @@
 // Ce script est utilisé par "À tester" et "Classement".
-// Il fabrique les cartes, enregistre les notes et trie la liste.
+// Il fabrique les cartes, enregistre les notes, trie la liste
+// et permet de retirer un cocktail de la Glougloulist.
 // (Code écrit avec l'aide d'une IA : voir l'historique des prompts.)
 
 const list = document.getElementById("cocktail-list");
@@ -10,12 +11,22 @@ const mode = list.dataset.mode;
 
 // 1. LES NOTES, enregistrées dans le navigateur (localStorage).
 // Elles ont cette forme : { "mojito": 4, "negroni": 5 }
+// try/catch : si le navigateur bloque le stockage ou si les données sont
+// abîmées, le site continue de marcher (sans mémoriser les notes).
 function getRatings() {
-    return JSON.parse(localStorage.getItem("glouglou-ratings")) || {};
+    try {
+        return JSON.parse(localStorage.getItem("glouglou-ratings")) || {};
+    } catch (error) {
+        return {};
+    }
 }
 
 function saveRatings(ratings) {
-    localStorage.setItem("glouglou-ratings", JSON.stringify(ratings));
+    try {
+        localStorage.setItem("glouglou-ratings", JSON.stringify(ratings));
+    } catch (error) {
+        console.error("Impossible d'enregistrer les notes :", error);
+    }
 }
 
 // 2. AFFICHER LES CARTES (filtrées puis triées)
@@ -70,27 +81,36 @@ function createCard(c, note) {
             </select>
             <button type="button">Ajouter à ma Glougloulist</button>`;
     } else {
-        // Déjà testé : on affiche la note en étoiles
-        bottom = `<p class="card-rating" aria-label="Note : ${note} sur 5">${"★".repeat(note)}${"☆".repeat(5 - note)}</p>`;
+        // Déjà testé : note en étoiles + bouton pour retirer
+        bottom = `
+            <p class="card-rating" aria-label="Note : ${note} sur 5">${"★".repeat(note)}${"☆".repeat(5 - note)}</p>
+            <button type="button">Retirer de ma Glougloulist</button>`;
     }
 
     card.innerHTML = `
-        <div class="card-image" aria-hidden="true">${c.emoji}</div>
+        <img class="card-image" src="images/${c.id}.webp" alt="" width="675" height="450" loading="lazy">
         <h2><a class="card-link" href="cocktails/${c.id}.html">${c.name}</a></h2>
         <p>${c.description}</p>
         <p>Coût estimé : ${c.cost.toLocaleString("fr-FR")} €</p>
         <div class="card-actions">${bottom}</div>`;
 
-    // Clic sur le bouton : on enregistre la note puis on réaffiche les cartes
+    // Chaque carte a exactement un bouton. Au clic :
+    // - cocktail non testé : on enregistre la note choisie (ajout)
+    // - cocktail testé : on supprime sa note (retrait)
+    // Puis on réaffiche les cartes : le cocktail change de page tout seul.
     const button = card.querySelector("button");
-    if (button !== null) {
-        button.addEventListener("click", function () {
-            const ratings = getRatings();
+    button.addEventListener("click", function () {
+        const ratings = getRatings();
+
+        if (note === undefined) {
             ratings[c.id] = Number(card.querySelector("select").value);
-            saveRatings(ratings);
-            showCards();
-        });
-    }
+        } else {
+            delete ratings[c.id];
+        }
+
+        saveRatings(ratings);
+        showCards();
+    });
 
     return card;
 }

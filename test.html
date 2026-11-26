@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Eliot Rys Louis Mas Andrea Maiolo">
-    <meta name="description" content="Votre classement personnel de cocktails testés, triable par note ou par coût.">
+    <meta name="description" content="Tous les cocktails que vous n'avez pas encore testés, triés par coût, avec un bouton pour les noter">
     <link rel="icon" href="favicon/favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" sizes="32x32"href="favicon/favicon-32x32.ico">
-    <link rel="icon" type="image/png" sizes="16x16"href="favicon/favicon-16x16.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <title>Classement | GLOUGLOU</title>
-
+    <title>À tester! - GLOUGLOU</title>
+    
     <link id="theme-stylesheet" rel="stylesheet" href="css/style.css">
     <script src="js/theme.js" defer></script>
     <script src="js/data.js" defer></script>
@@ -23,38 +23,27 @@
         <a id = "logo" href="index.html"> <img src="favicon/glouglou_logo.svg" alt="Logo GlouGlou" width=200></a>
         <nav aria-label="Navigation principale">
             <a href="index.html">Accueil</a>
-            <a href="a-tester.html">À tester</a>
-            <a href="classement.html">Classement</a>
-            <a href="parametres.html">Paramètres</a>
+            <a href="test.html">À tester</a>
+            <a href="glougloulist.html">Classement</a>
+            <a href="settings.html">Paramètres</a>
         </nav>
     </header>
 
-    
-<main class="container classement-page">
-        <div class="classement-header">
-            <div>
-                <h1>Classement</h1>
-                <p>Les cocktails que vous avez testés.</p>
-            </div>
+    <main class="container">
+        <h1>À tester</h1>
+        <p>Tous les cocktails que vous n'avez pas encore testés.</p>
 
-            <div>
-                <label for="sort">Trier par</label>
-                <select id="sort">
-                    <option value="rating-desc">Meilleure note</option>
-                    <option value="rating-asc">Moins bonne note</option>
-                    <option value="cost-asc">Coût croissant</option>
-                    <option value="cost-desc">Coût décroissant</option>
-                </select>
-            </div>
-        </div>
+        <label for="sort">Trier par</label>
+        <select id="sort">
+            <option value="cost-asc">Coût croissant</option>
+            <option value="cost-desc">Coût décroissant</option>
+        </select>
 
-        <section class="card-grid" id="cocktail-list" data-mode="tested" aria-label="Cocktails testés">
-            <noscript><p>Activez JavaScript pour afficher votre classement.</p></noscript>
+        <section class="card-grid" id="cocktail-list" data-mode="to-test" aria-label="Cocktails à tester">
+            <noscript><p>Activez JavaScript pour afficher la liste des cocktails.</p></noscript>
         </section>
-
-    <a id="toplink" href="#Top" title="Retour haut de la page"><button>haut</button></a>
-</main>
-
+        <a id="toplink" href="#Top" title="Retour haut de la page"><button>haut</button></a>
+    </main>
 
     <footer class="site-footer">
         <div class="footer-content">
@@ -71,9 +60,9 @@
             <nav class="footer-nav" aria-label="Navigation du pied de page">
                 <h3>Navigation</h3>
                 <a href="index.html">Accueil</a>
-                <a href="a-tester.html">À tester</a>
-                <a href="classement.html">Classement</a>
-                <a href="parametres.html">Paramètres</a>
+                <a href="test.html">À tester</a>
+                <a href="glougloulist.html">Classement</a>
+                <a href="settings.html">Paramètres</a>
             </nav>
 
             <nav class="footer-nav" aria-label="Réseaux sociaux">
