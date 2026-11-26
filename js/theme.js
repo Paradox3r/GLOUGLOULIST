@@ -3,10 +3,10 @@
 
 const stylesheet = document.getElementById("theme-stylesheet");
 
-// Le lien de la page vaut "css/style.css" ou "../css/style.css" (dans cocktails/).
+// Le lien de la page vaut "css/style.min.css" ou "../css/style.min.css" (dans cocktails/).
 // On en déduit le lien du style alternatif en changeant juste le nom du fichier.
 const defaultHref = stylesheet.getAttribute("href");
-const alternativeHref = defaultHref.replace("style.css", "style-alternatif.css");
+const alternativeHref = defaultHref.replace("style.min.css", "style-alternatif.min.css");
 
 // Si l'utilisateur avait choisi le style alternatif, on le restaure.
 if (localStorage.getItem("theme") === "alternative") {
