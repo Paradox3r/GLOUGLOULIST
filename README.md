@@ -49,6 +49,6 @@ Chaque page a son **propre fichier HTML**. Le JavaScript ne fabrique plus les pa
 
 ## Les liens important
 
-1. Notre repo github 'https://github.com/Paradox3r/GLOUGLOULIST'
+1. Notre repo github https://github.com/Paradox3r/GLOUGLOULIST
 2. Notre lien vers notre système de gestion de projet ''
-3. Lien de notre site web 'https://siteela.alwaysdata.net
+3. Lien de notre site web https://siteela.alwaysdata.net
