@@ -45,3 +45,9 @@ Chaque page a son **propre fichier HTML**. Le JavaScript ne fabrique plus les pa
 3. Modifier les couleurs et espacements.
 4. Comprendre `js/theme.js` puis `js/feedback.js`.
 5. Ajouter les éléments obligatoires de l'énoncé, un à un.
+
+## Les liens important
+
+1. Notre repo github 'https://github.com/Paradox3r/GLOUGLOULIST'
+2. Notre lien vers notre système de gestion de projet ''
+3. Lien de notre site web 'https://siteela.alwaysdata.net
