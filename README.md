@@ -13,7 +13,7 @@ Chaque page a son **propre fichier HTML**. Le JavaScript ne fabrique plus les pa
 ## Structure
 
 - `index.html` : accueil.
-- `test.html` : liste des cocktails à tester.
+- `untested_cocktails.html` : liste des cocktails à tester.
 - `glougloulist.html` : classement.
 - `cocktail.html` : exemple d'une fiche cocktail.
 - `settings.html` : bouton de style et formulaire.

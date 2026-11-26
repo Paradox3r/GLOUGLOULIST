@@ -3,7 +3,7 @@
 // et permet de retirer un cocktail de la Glougloulist.
 // (Code écrit avec l'aide d'une IA : voir l'historique des prompts.)
 
-const list = document.getElementById("cocktail-list");
+const list = document.getElementById("card-grid");
 const sortSelect = document.getElementById("sort");
 
 // "to-test" ou "tested" : écrit dans le HTML de chaque page (data-mode)
