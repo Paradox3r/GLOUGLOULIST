@@ -28,7 +28,7 @@
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "GLOUGLOU",
-    "url": "sitela.alwaysdata.net/",
+    "url": "siteela.alwaysdata.net",
     "address": {
         "@type": "PostalAddress",
         "streetAddress": "413 avenue Gaston Berger",
@@ -46,7 +46,8 @@
     
 </head>
 <body>
-    <header class="site-header">
+    <header id="site-header">
+        <a id="Top"></a> <!-- ancre pour le haut de la page -->
         <a id = "logo" href="index.html"> <img src="favicon/glouglou_logo.svg" alt="Logo GlouGlou" width=200></a>
         <nav aria-label="Navigation principale">
             <a href="index.html">Accueil</a>
@@ -56,10 +57,10 @@
         </nav>
     </header>
 
-    <main class="container">
-        <section class="hero">
-            <p class="eyebrow">Bienvenue sur GLOUGLOU</p>
-            <video controls="controls" width="500" height="300" autoplay>
+    <main id="container">
+        <section id="hero">
+            <p id="eyebrow">Bienvenue sur GLOUGLOU</p>
+            <video controls="controls" width="500" height="300" autoplay loop>
                 <source src="video/videococktail.mp4" type="video/mp4">
                 <track src="video/videococktail.vtt" kind="captions" srclang="fr" label="Français" default>
             </video>
@@ -70,7 +71,7 @@
             <h2 id="top-title">Nos coups de cœur</h2>
 
             <!-- Pour ajouter une carte : copier un bloc <article> complet. -->
-            <div class="card-grid">
+            <div id="card-grid">
                 <article class="card">
                     <img class="card-image" src="images/mojito.webp" alt="" width="675" height="450" loading="lazy">
                     <h3>Mojito</h3>
@@ -90,10 +91,10 @@
     </main>
 
     
-<footer class="site-footer">
-        <div class="footer-content">
+<footer id="site-footer">
+        <div id="footer-content">
 
-            <div class="footer-about">
+            <div id="footer-about">
                 <h2>GLOUGLOU.</h2>
                 <p>Découvrez, testez et classez vos cocktails préférés.</p>
                 <address>
@@ -120,7 +121,7 @@
 
         </div>
 
-        <div class="footer-bottom">
+        <div id="footer-bottom">
             <p>© 2026 GLOUGLOU — Projet étudiant</p>
             <p>L'abus d'alcool est dangereux pour la santé.</p>
         </div>

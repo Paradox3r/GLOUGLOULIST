@@ -21,7 +21,7 @@ body {
 
 a { color: var(--accent); }
 /* 3. MENU */
-.site-header {
+#site-header {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -32,7 +32,7 @@ a { color: var(--accent); }
     border-bottom: 10px dashed var(--border);
     background-image: url("../images/bulle.webp");
 }
-.site-header > a:not([href]) { position: absolute; }
+#site-header > a:not([href]) { position: absolute; }
 #logo { margin-right: auto; }
 #logo img { display: block; width: 200px; max-width: 100%; height: auto; }
 nav { display: flex; flex-wrap: wrap-reverse; gap: 50px; }
@@ -40,7 +40,7 @@ nav a { text-decoration: none; }
 nav a:hover { color: var(--accent); }
 
 /* 4. CONTENU DES PAGES */
-.container {
+#container {
     border-radius: 0;
     max-width: 1000px;
     margin: 0 auto;
@@ -48,8 +48,8 @@ nav a:hover { color: var(--accent); }
     min-height: 65vh;
 }
 
-.hero { padding: 25px 0; }
-.eyebrow { color: var(--accent); font-weight: bold; }
+#hero { padding: 25px 0; }
+#eyebrow { color: var(--accent); font-weight: bold; }
 
 /* 5. COMPOSANTS RÉUTILISABLES */
 
@@ -61,7 +61,7 @@ nav a:hover { color: var(--accent); }
     border-radius: 0;
     margin-bottom: 10px;
 }
-.card-grid {
+#card-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
@@ -140,7 +140,7 @@ img {
 
 /* ------=== FOOTER ===--------- */
 
-.site-footer {
+#site-footer {
     padding: 25px;
     text-align: center;
     background-color: aquamarine;
@@ -149,7 +149,7 @@ img {
 }
 
 /* Les deux colonnes */
-.footer-content {
+#footer-content {
     display: flex;
     justify-content: space-between;
     gap: 30px;
@@ -158,15 +158,15 @@ img {
 }
 
 /* Présentation */
-.footer-about {
+#footer-about {
     max-width: 300px;
 }
 
-.footer-about h2 {
+#footer-about h2 {
     margin-top: 0;
 }
 
-.footer-about p {
+#footer-about p {
     color: gray;
 }
 
@@ -187,7 +187,7 @@ img {
 }
 
 /* Partie inférieure */
-.footer-bottom {
+#footer-bottom {
     max-width: 1100px;
     margin: 30px auto 0;
     padding-top: 15px;
@@ -199,7 +199,7 @@ img {
     flex-wrap: wrap;
 }
 
-.footer-bottom p {
+#footer-bottom p {
     color: aquamarine;
     font-size: 12px;
 }
@@ -207,7 +207,7 @@ img {
 
 /* ===== PAGE CLASSEMENT ===== */
 
-.classement-header {
+#classement-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -215,11 +215,11 @@ img {
     margin-bottom: 30px;
 }
 
-.classement-header h1 {
+#classement-header h1 {
     margin-bottom: 5px;
 }
 
-.classement-header p {
+#classement-header p {
     margin-top: 0;
     color: aquamarine;
 }
@@ -334,9 +334,9 @@ img {
 
 /* 7. MOBILE */
 @media (max-width: 600px) {
-    .site-header { flex-direction: column; align-items: flex-start; }
-    .card-grid { grid-template-columns: 1fr; }
-    .footer-content {
+    #site-header { flex-direction: column; align-items: flex-start; }
+    #card-grid { grid-template-columns: 1fr; }
+    #footer-content {
         flex-direction: column;
     }
 
