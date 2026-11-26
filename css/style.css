@@ -42,7 +42,7 @@ nav a:hover { color: var(--accent); }
     min-height: 65vh;
 }
 
-.hero { padding: 25px 0; }
+.hero { padding: 25px 0; display: flex; justify-content: space-between;}
 .eyebrow { color: var(--accent); font-weight: bold; }
 
 /* 5. COMPOSANTS RÉUTILISABLES */
