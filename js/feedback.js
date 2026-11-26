@@ -1,6 +1,6 @@
 // Le formulaire prépare un e-mail, sans serveur.
 // IMPORTANT : remplacez l'adresse ci-dessous par la vôtre.
-const destinationEmail = "contact@example.com";
+const destinationEmail = "louis.mas@etu.univ-amu.fr";
 
 const feedbackForm = document.getElementById("feedback-form");
 
